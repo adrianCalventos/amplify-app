@@ -16,6 +16,7 @@ import {
   deleteNote as deleteNoteMutation,
 } from "./graphql/mutations";
 import Note from './notes/note';
+import { NavBarHeader2 } from "./ui-components";
 const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
   
@@ -46,6 +47,8 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
+      <NavBarHeader2 login={withAuthenticator}/>
+
       <Heading level={1}>My Notes App</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center">
@@ -79,6 +82,7 @@ const App = ({ signOut }) => {
             notes={notes}
             setNotes={setNotes}
             id={note.id}
+            
           />
         ))}
       </View>
@@ -87,4 +91,4 @@ const App = ({ signOut }) => {
   );
 };
 
-export default withAuthenticator(App);
+export default App;

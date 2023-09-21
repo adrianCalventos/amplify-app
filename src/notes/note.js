@@ -8,6 +8,7 @@ import { API } from "aws-amplify";
 import {
   deleteNote as deleteNoteMutation,
 } from "../graphql/mutations";
+import { ActionCard } from '../ui-components';
 const Note = ({id, note, notes, setNotes}) =>{
 
     async function handleDelete() {
@@ -21,20 +22,36 @@ const Note = ({id, note, notes, setNotes}) =>{
 
     }
     return (
-      <Flex
+    //   <Flex
+    //       key={note.id  || note.name}
+    //       direction="row"
+    //       justifyContent="center"
+    //       alignItems="center"
+    //   > 
+    //   <Text as="strong" fontWeight={700}>
+    //     {note.name}  
+    //   </Text>
+    //   <Text as="span">{note.description}</Text>
+    //   <Button variation="link" id={note.id}  onClick={handleDelete}>
+    //     Delete note - {id}
+    //   </Button>
+    // </Flex>
+      <ActionCard>
+        {/* <Flex
           key={note.id  || note.name}
           direction="row"
           justifyContent="center"
           alignItems="center"
-      > 
-      <Text as="strong" fontWeight={700}>
-        {note.name}  
-      </Text>
-      <Text as="span">{note.description}</Text>
-      <Button variation="link" id={note.id}  onClick={handleDelete}>
-        Delete note - {id}
-      </Button>
-    </Flex>
+        > s
+        <Text as="strong" fontWeight={700}>
+          {note.name}  
+        </Text>
+        <Text as="span">{note.description}</Text>
+        <Button variation="link" id={note.id}  onClick={handleDelete}>
+          Delete note - {id}
+        </Button>
+        </Flex> */}
+      </ActionCard>
     )
 };
 
