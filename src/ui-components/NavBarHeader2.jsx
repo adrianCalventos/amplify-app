@@ -14,6 +14,8 @@ export default function NavBarHeader2(props) {
     second = "second",
     third = "third",
     login,
+    password = "password",
+    username = "user",
     overrides,
     ...rest
   } = props;
@@ -22,7 +24,7 @@ export default function NavBarHeader2(props) {
       gap="10px"
       direction="row"
       width="1440px"
-      height="unset"
+      height="120px"
       justifyContent="space-between"
       alignItems="center"
       overflow="hidden"

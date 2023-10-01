@@ -27,6 +27,8 @@ export declare type NavBarHeader2Props = React.PropsWithChildren<Partial<FlexPro
     second?: String;
     third?: String;
     login?: (event: SyntheticEvent) => void;
+    password?: String;
+    username?: String;
 } & {
     overrides?: NavBarHeader2OverridesProps | undefined | null;
 }>;
